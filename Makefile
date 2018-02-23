@@ -1,12 +1,13 @@
 
 BINDIR=./bin
 OBJDIR=./obj
+SRCDIR=./src
 COMPILE_FLAGS=-std=c++11 -Wall -Werror
 LINK_FLAGS=-lgtest -lpthread
 
 all: dirs pizza
 
-%.o: %.cpp %.hpp
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(SRCDIR)/%.hpp
 	g++ $(COMPILE_FLAGS) -c $< -o $@
 
 pizza: $(OBJDIR)/unittest.o 
