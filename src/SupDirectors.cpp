@@ -29,7 +29,9 @@ std::shared_ptr<Sup> AlpineSupDirector::Construct(SupBuilder& builder)
 {
 	builder.Create();
 	builder.SetBase("rye bread");
+	builder.AddVegetables("lettuce");
 	builder.AddMain("sausage");
 	builder.AddExtra("fried onions");
+	builder.AddSauce("mayo");
 	return builder.GetConstructed();
 }
