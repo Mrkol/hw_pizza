@@ -83,7 +83,6 @@ RollBuilder::RollBuilder()
 
 void RollBuilder::Create()
 {
-	if (!Initialized()) throw -1;
 	_current.reset(new Roll());
 }
 
