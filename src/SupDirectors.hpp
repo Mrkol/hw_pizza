@@ -1,8 +1,9 @@
+#pragma once
+
 #include <memory>
 #include "Sups.hpp"
 #include "SupBuilders.hpp"
 
-#pragma once
 
 
 class SupDirector
@@ -12,21 +13,21 @@ public:
 };
 
 //Will try and stuff mexican ingredients into your sup
-class MexicanSupBuilder : SupDirector
+class MexicanSupDirector : public SupDirector
 {
 public:
 	virtual std::shared_ptr<Sup> Construct(SupBuilder&) override;
 };
 
 //etc...
-class ItalianSupBuilder : SupDirector
+class ItalianSupDirector : public SupDirector
 {
 public:
 	virtual std::shared_ptr<Sup> Construct(SupBuilder&) override;
 };
 
 //shhhhh
-class AlpineSupBuilder : SupDirector
+class AlpineSupDirector : public SupDirector
 {
 public:
 	virtual std::shared_ptr<Sup> Construct(SupBuilder&) override;

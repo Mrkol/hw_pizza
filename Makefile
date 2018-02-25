@@ -10,7 +10,7 @@ all: dirs pizza
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(SRCDIR)/%.hpp
 	g++ $(COMPILE_FLAGS) -c $< -o $@
 
-pizza: $(OBJDIR)/unittest.o 
+pizza: $(OBJDIR)/unittest.o $(OBJDIR)/Sups.o $(OBJDIR)/SupBuilders.o $(OBJDIR)/SupDirectors.o
 	g++ $? $(LINK_FLAGS) -o $(BINDIR)/$@
 
 dirs:
